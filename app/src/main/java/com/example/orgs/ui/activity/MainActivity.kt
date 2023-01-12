@@ -2,19 +2,23 @@ package com.example.orgs.ui.activity
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.recyclerview.widget.RecyclerView
-import com.example.orgs.R
+import com.example.orgs.databinding.ActivityMainBinding
 import com.example.orgs.model.Produto
 import com.example.orgs.ui.recyclerview.adapter.ListaProdutosAdapter
 import java.math.BigDecimal
 
 class MainActivity : AppCompatActivity() {
 
+    private lateinit var binding: ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        val view = binding.root
+        setContentView(view)
+      //  setContentView(R.layout.activity_main)
 
-        val recyclerView = findViewById<RecyclerView>(R.id.rv_Produtos)
+        val recyclerView = binding.rvProdutos
         recyclerView.adapter = ListaProdutosAdapter(context = this, produtos = listOf(
             Produto(name = "abobora",
                 description = "super fresca",
@@ -26,5 +30,4 @@ class MainActivity : AppCompatActivity() {
             )
         ))
     }
-
 }
