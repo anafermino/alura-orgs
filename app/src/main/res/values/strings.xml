@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Orgs</string>
+    <string name="salada_titulo">Salada de frutas</string>
+    <string name="hint_name">Nome</string>
+    <string name="hint_about">Descrição</string>
+    <string name="hint_price">Valor</string>
+    <string name="save">salvar</string>
+</resources>
