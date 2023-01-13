@@ -3,6 +3,7 @@ package com.example.orgs.ui.activity
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import com.example.orgs.dao.ProdutosDao
 import com.example.orgs.databinding.ActivityFormularioProdutoBinding
 import com.example.orgs.model.Produto
 import java.math.BigDecimal
@@ -36,6 +37,10 @@ class FormularioProdutoActivity : AppCompatActivity() {
                 price = valor
             )
             Log.i("FormularioProdutoActivity", "onCreate: $produtoNovo")
+            val dao = ProdutosDao()
+            dao.addNewProduct(produtoNovo)
+            Log.i("FormularioProdutoActivity", "onCreate: ${dao.showAllProducts()}")
+            finish()
         }
     }
 }
