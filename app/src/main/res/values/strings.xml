@@ -5,4 +5,5 @@
     <string name="hint_about">Descrição</string>
     <string name="hint_price">Valor</string>
     <string name="save">salvar</string>
+    <string name="accessibility_add">Adicionar na lista, botão</string>
 </resources>

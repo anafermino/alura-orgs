@@ -1,5 +1,6 @@
 package com.example.orgs.ui.activity
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -30,5 +31,11 @@ class MainActivity : AppCompatActivity() {
             )
         ))
         recyclerView.layoutManager = LinearLayoutManager(this)
+
+        binding.fabAdd.setOnClickListener {
+            Intent(this, FormularioProdutoActivity::class.java).also {
+                startActivity(it)
+            }
+        }
     }
 }
