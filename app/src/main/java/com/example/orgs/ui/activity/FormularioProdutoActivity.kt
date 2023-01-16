@@ -18,29 +18,32 @@ class FormularioProdutoActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
-//        val nome = binding.nome.text.toString()
-//        Log.i("FormularioProdutoActivity", "onCreate: $nome")
+        configSaveBtn()
+    }
 
-        binding.btnSaveData.setOnClickListener {
-            val nome = binding.nome.text.toString()
-            val descricao = binding.descricao.text.toString()
-            val valorEmTexto = binding.valor.text.toString()
-            val valor = if(valorEmTexto.isBlank()) {
-                BigDecimal.ZERO
-            } else {
-                BigDecimal(valorEmTexto)
-            }
-
-            val produtoNovo = Produto(
-                name = nome,
-                description = descricao,
-                price = valor
-            )
-            Log.i("FormularioProdutoActivity", "onCreate: $produtoNovo")
-            val dao = ProdutosDao()
+    private fun configSaveBtn() {
+        val dao = ProdutosDao()
+        binding.afpBtnSaveData.setOnClickListener {
+            val produtoNovo = createNewProduct()
             dao.addNewProduct(produtoNovo)
-            Log.i("FormularioProdutoActivity", "onCreate: ${dao.showAllProducts()}")
             finish()
         }
+    }
+
+    private fun createNewProduct(): Produto {
+        val nome = binding.afpNome.text.toString()
+        val descricao = binding.afpDescricao.text.toString()
+        val valorEmTexto = binding.afpValor.text.toString()
+        val valor = if (valorEmTexto.isBlank()) {
+            BigDecimal.ZERO
+        } else {
+            BigDecimal(valorEmTexto)
+        }
+
+        return Produto(
+            name = nome,
+            description = descricao,
+            price = valor
+        )
     }
 }

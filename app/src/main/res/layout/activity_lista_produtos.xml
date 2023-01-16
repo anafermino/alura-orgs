@@ -6,7 +6,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_Produtos"
+        android:id="@+id/alp_rv_Produtos"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -16,7 +16,7 @@
         tools:listitem="@layout/produto_item" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab_add"
+        android:id="@+id/alp_fab_add"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:clickable="true"

@@ -6,7 +6,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <TextView
-        android:id="@+id/nome"
+        android:id="@+id/pi_nome"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
@@ -16,23 +16,23 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
-        android:id="@+id/descricao"
+        android:id="@+id/pi_descricao"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/nome"
+        app:layout_constraintTop_toBottomOf="@id/pi_nome"
         tools:text="laranja, morango, banana" />
 
     <TextView
-        android:id="@+id/valor"
+        android:id="@+id/pi_valor"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/descricao"
+        app:layout_constraintTop_toBottomOf="@id/pi_descricao"
         tools:text="18,56" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

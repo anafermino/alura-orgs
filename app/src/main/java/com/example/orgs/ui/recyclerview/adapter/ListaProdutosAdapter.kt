@@ -16,9 +16,9 @@ class ListaProdutosAdapter(
 
     class ViewHolder(private val binding: ProdutoItemBinding) : RecyclerView.ViewHolder(binding.root) {
         fun vincula(produto: Produto) {
-            binding.nome.text = produto.name
-            binding.descricao.text = produto.description
-            binding.valor.text = produto.price.toPlainString()
+            binding.piNome.text = produto.name
+            binding.piDescricao.text = produto.description
+            binding.piValor.text = produto.price.toPlainString()
         }
     }
 

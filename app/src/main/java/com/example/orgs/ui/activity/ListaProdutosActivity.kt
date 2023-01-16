@@ -42,17 +42,16 @@ class ListaProdutosActivity : AppCompatActivity() {
     }
 
     private fun configRecyclerView() {
-        val recyclerView = binding.rvProdutos
+        val recyclerView = binding.alpRvProdutos
         recyclerView.adapter = adapter
         recyclerView.layoutManager = LinearLayoutManager(this)
     }
 
     private fun configFab() {
-        binding.fabAdd.setOnClickListener {
+        binding.alpFabAdd.setOnClickListener {
             Intent(this, FormularioProdutoActivity::class.java).also {
                 startActivity(it)
             }
         }
     }
-
 }
